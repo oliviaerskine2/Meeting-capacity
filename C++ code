@@ -1,0 +1,33 @@
+// Olivia Erskine
+// Sept 13 2024
+// C++ code to determine whether a meeting is in ciolation of fire law.
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	// variables
+	int numberOfPeople, capacity;
+	
+	// input
+	cout << "How many people are attending the meeting? ";
+	cin >> numberOfPeople;
+	cout << "What is the maximum room capacity? ";
+	cin >> capacity;
+
+	// processing and output
+	if (capacity - numberOfPeople > 0)
+	{
+	  cout << "It is legal to hold the meeting. " << capacity - numberOfPeople << " more people may attend." << endl;
+	}
+	else if (capacity - numberOfPeople == 0)
+	{
+	  cout << "It is legal to hold the meeting. You have invited the maximum number of people." << endl;
+	}
+	else
+	{
+	  cout << "The meeting cannot be held as planned due to fire regulations. " << numberOfPeople - capacity << " people need to be excluded in order to meet the fire regulations." << endl;
+	}
+	return 0;
+}
